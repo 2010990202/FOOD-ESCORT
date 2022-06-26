@@ -54,6 +54,7 @@ public class food_escort extends javax.swing.JFrame {
        initComponents();
        show(position);
        SelectItem();
+        paynow.setEnabled(false);
        //prod_quan.setEnabled(false);
     }
     int position=0;
@@ -3674,6 +3675,7 @@ mainpanel.setVisible(false);
                 Statement add=con.createStatement();
                 add.executeUpdate(query);
                 SelectItem();
+                paynow.setEnabled(false);
                // JOptionPane.showMessageDialog(null, "thanks");
             }catch(Exception e){
                 e.printStackTrace();
@@ -4872,7 +4874,7 @@ int t;
 // 3rd column . row column indexes are 0 based
 }
      rate.setText(""+subtot);   
-        
+      paynow.setEnabled(true);  
         
     }//GEN-LAST:event_billMouseClicked
 
